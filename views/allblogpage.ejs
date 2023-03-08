@@ -1,0 +1,31 @@
+<html lang="en">
+
+
+<body>
+  <h1>This is all blog page</h1>
+  <div class="create-blog content">
+    <form action="/users/submit" method="POST">
+      <label>Title:</label>
+      <input type="text" name="title">
+
+      <label>Snippet:</label>
+      <input type="text" name="snippet">
+
+      <label>Body:</label>
+      <input type="text" name="body">
+      <button type="submit">Submit</button>
+    </form>
+      <% if (blogs.length > 0){    %>
+      <% blogs.forEach(blog=> {    %>
+          <h3><%= blog.title %><h3>
+            <h4><%= blog.snippet %></h4>
+            <h4><%= blog.body %></h4></Br>
+      <% }) %>
+      <% } else { %>
+        <p>there are no blogs to display</p>
+        <% } %>
+        </div>
+
+
+</body>
+</html>
